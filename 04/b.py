@@ -8,7 +8,7 @@ with open('04.txt') as file:
 		line[1] = line[1].split("|")
 		lines.append(line)
 
-print(lines)
+#print(lines)
 
 count_cards = [1] * len(lines)
 

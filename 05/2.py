@@ -21,10 +21,11 @@ print(changes)
 
 for i in range(len(changes)):
 	checked = []
+
 	for j in range(len(changes[i])):
 		unchecked = []
-
 		# traverses all the ranges (even the ones we add)
+		
 		for k in range(len(ranges)):
 			dest, start, incr = changes[i][j][0], changes[i][j][1], changes[i][j][2]
 
@@ -36,7 +37,6 @@ for i in range(len(changes)):
 				i1 = [min(s1,s2),max(s1,s2)-1] 
 				c2 = [max(s1,s2),min(e1,e2)]
 				i3 = [min(e1,e2)+1, max(e1,e2)]
-
 				#adding "distances to shift from destination"
 				i2 = [c2[0]-start+dest,c2[1]-start+dest]
 				checked.append(i2)
